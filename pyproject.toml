@@ -1,0 +1,32 @@
+[tool.ruff]
+# Match Black defaults
+line-length = 88
+target-version = "py314" # change if needed
+
+[tool.ruff.format]
+# Black-compatible formatting
+quote-style = "double"
+indent-style = "space"
+skip-magic-trailing-comma = false
+line-ending = "auto"
+
+[tool.ruff.lint]
+# Enable rules commonly covered by Black + isort usage
+select = ["E", "F", "I"]
+
+[tool.ruff.lint.isort]
+# isort defaults (Black profile)
+combine-as-imports = true
+force-sort-within-sections = false
+known-first-party = []
+known-third-party = []
+section-order = [
+    "future",
+    "standard-library",
+    "third-party",
+    "first-party",
+    "local-folder",
+]
+
+# Match Black behavior
+lines-after-imports = 2
